@@ -1,0 +1,152 @@
+{
+  "description": "构建清单：定义源目录、章节顺序与文案修订。文档标题、正文与链接均从源仓库读取，不在此重复。",
+  "sources": {
+    "site": {
+      "default": "../gf-site-65d6fdd",
+      "roots": [
+        "docs/docs",
+        "docs/examples",
+        "docs/quick",
+        "docs/ai"
+      ]
+    }
+  },
+  "sections": [
+    {
+      "title": "快速开始",
+      "root": "quick",
+      "flatten": [
+        "quick/快速开始"
+      ]
+    },
+    {
+      "title": "核心组件",
+      "root": "docs/核心组件"
+    },
+    {
+      "title": "WEB 服务开发",
+      "root": "docs/WEB服务开发"
+    },
+    {
+      "title": "微服务开发",
+      "root": "docs/微服务开发"
+    },
+    {
+      "title": "服务可观测性",
+      "root": "docs/服务可观测性"
+    },
+    {
+      "title": "组件列表",
+      "root": "docs/组件列表"
+    },
+    {
+      "title": "框架设计",
+      "root": "docs/框架设计"
+    },
+    {
+      "title": "开发工具",
+      "root": "docs/开发工具"
+    },
+    {
+      "title": "项目部署",
+      "root": "docs/项目部署"
+    },
+    {
+      "title": "AI 辅助开发",
+      "root": "ai",
+      "flatten": [
+        "ai/vibe-coding"
+      ]
+    },
+    {
+      "title": "示例项目",
+      "root": "examples"
+    },
+    {
+      "title": "其他资料",
+      "root": "docs/其他资料"
+    },
+    {
+      "title": "常见问题与排查",
+      "files": [
+        "docs/常见问题-FAQ.md"
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "slug": "/quick/install",
+      "from": "golang版本 >= 1.20",
+      "to": "golang版本 >= 1.23",
+      "reason": "与 go.mod 的 go 1.23.0 对齐，源页面该行未随版本更新"
+    },
+    {
+      "from": "聪明的您一定发现了",
+      "to": "细心的读者一定发现了",
+      "reason": "避免第二人称"
+    },
+    {
+      "from": "恭喜你，第一个 `Go` 程序",
+      "to": "完成第一个 `Go` 程序",
+      "reason": "避免第二人称与口语化表达"
+    },
+    {
+      "from": "Go 1.20 或更高版本",
+      "to": "Go 1.23 或更高版本",
+      "reason": "与 go.mod 的 go 1.23.0 对齐"
+    },
+    {
+      "from": "1.22或更高版本",
+      "to": "1.23 或更高版本",
+      "reason": "与 go.mod 的 go 1.23.0 对齐"
+    },
+    {
+      "from": "Github Source:",
+      "to": "GitHub 源码：",
+      "reason": "统一可见术语大小写与标点"
+    },
+    {
+      "from": "`Javascript`",
+      "to": "`JavaScript`",
+      "reason": "统一可见术语大小写"
+    },
+    {
+      "from": "我来给你写个例子吧：",
+      "to": "下面给出一个例子：",
+      "reason": "去除第二人称与口语化表达"
+    },
+    {
+      "from": "绝对路径，。",
+      "to": "绝对路径。",
+      "reason": "修正标点重复"
+    },
+    {
+      "from": "`1.22` 或更高版本",
+      "to": "`1.23` 或更高版本",
+      "reason": "与框架最低 Go 版本对齐"
+    },
+    {
+      "from": "`1.18` 或更高版本",
+      "to": "`1.23` 或更高版本",
+      "reason": "与框架最低 Go 版本对齐"
+    },
+    {
+      "from": "`Go 1.15` 或更高版本",
+      "to": "`Go 1.23` 或更高版本",
+      "reason": "与框架最低 Go 版本对齐"
+    }
+  ],
+  "assets": [
+    {
+      "from": "docs/docs/开发工具/代码生成-gen/gen-ctrl-watchers.xml",
+      "to": "docs/cli/gen-ctrl-watchers.xml"
+    },
+    {
+      "from": "docs/docs/开发工具/代码生成-gen/gen-service-watchers.xml",
+      "to": "docs/cli/gen-service-watchers.xml"
+    }
+  ],
+  "exclude": [
+    "quick/preface/preface.md"
+  ]
+}
