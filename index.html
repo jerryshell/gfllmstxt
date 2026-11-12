@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GoFrame llms.txt</title>
+    <meta name="description" content="GoFrame 的自包含 llms.txt 文档集，面向大语言模型与代码助手。" />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #ffffff;
+        --fg: #1a1a1a;
+        --muted: #5f6368;
+        --line: #e3e5e8;
+        --accent: #0b67c2;
+        --code: #f4f5f7;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #16181c;
+          --fg: #e8eaed;
+          --muted: #a0a4ab;
+          --line: #2b2f36;
+          --accent: #7ab7ff;
+          --code: #1e2228;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+          "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      }
+      main {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 64px 24px 96px;
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: 32px;
+        line-height: 1.3;
+        letter-spacing: 0.01em;
+      }
+      h2 {
+        margin: 48px 0 16px;
+        font-size: 20px;
+        line-height: 1.4;
+      }
+      p {
+        margin: 0 0 16px;
+        color: var(--muted);
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        border-top: 1px solid var(--line);
+      }
+      li {
+        display: flex;
+        gap: 16px;
+        align-items: baseline;
+        justify-content: space-between;
+        padding: 14px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      code {
+        padding: 2px 6px;
+        border-radius: 4px;
+        background: var(--code);
+        font: 13px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 14px;
+        white-space: nowrap;
+      }
+      footer {
+        margin-top: 48px;
+        padding-top: 24px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>GoFrame llms.txt</h1>
+      <p>
+        GoFrame 的自包含文档集，面向大语言模型与代码助手。正文为简体中文，全部页面以 Markdown
+        保存，索引中的文档链接均为站内相对路径。
+      </p>
+
+      <h2>入口</h2>
+      <ul>
+        <li>
+          <a href="/llms.txt">llms.txt</a>
+          <span class="meta">索引</span>
+        </li>
+        <li>
+          <a href="/llms-full.txt">llms-full.txt</a>
+          <span class="meta">全量单文件</span>
+        </li>
+        <li>
+          <a href="/guide/overview.md">框架概览</a>
+          <span class="meta">版本与安装</span>
+        </li>
+        <li>
+          <a href="/guide/source-map.md">源码结构</a>
+          <span class="meta">模块与包</span>
+        </li>
+        <li>
+          <a href="/guide/ai-conventions.md">AI 开发约定</a>
+          <span class="meta">生成代码前阅读</span>
+        </li>
+        <li>
+          <a href="/docs/core.md">核心组件</a>
+          <span class="meta">配置、日志、ORM</span>
+        </li>
+        <li>
+          <a href="/docs/web.md">WEB 服务开发</a>
+          <span class="meta">路由、请求、响应</span>
+        </li>
+        <li>
+          <a href="/examples/practices/user-http-service.md">HTTP 项目示例</a>
+          <span class="meta">工程实践</span>
+        </li>
+      </ul>
+
+      <h2>使用说明</h2>
+      <p>
+        先读 <code>llms.txt</code> 定位页面，需要完整上下文时读取
+        <code>llms-full.txt</code>。单篇文档可直接按索引中的路径访问。
+      </p>
+
+      <footer>
+        文档来自
+        <a href="https://github.com/gogf/gf-site">gogf/gf-site</a>，框架源码见
+        <a href="https://github.com/gogf/gf">gogf/gf</a>。本仓库采用
+        <a href="https://github.com/jerryshell/gfllmstxt/blob/master/LICENSE">MIT 许可</a>。
+      </footer>
+    </main>
+  </body>
+</html>

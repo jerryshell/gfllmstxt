@@ -10,6 +10,8 @@
 .
 ├── README.md           # 项目说明
 ├── LICENSE             # MIT 许可证
+├── index.html          # 站点入口页
+├── _headers            # Cloudflare Pages 响应头
 ├── llms.txt            # 入口索引，按章节列出全部页面
 ├── llms-full.txt       # 全部页面合并后的单文件版本
 ├── guide/              # 项目自编写的说明页
@@ -86,6 +88,27 @@ GF_SITE_SOURCE=/path/to/gf-site node scripts/build.mjs
 - 没有正文的目录页会生成子页面链接，便于从任意页面继续导航。
 - 源站的部分时效性内容未逐一校对，例如历史版本说明。框架版本与运行要求以 `guide/overview.md` 为准。
 - 示例代码位于官方仓库与 `gogf/examples`，本仓库只收录示例说明页。
+
+## 部署
+
+站点地址：https://gfllmstxt.pages.dev
+
+Cloudflare Pages 项目 `gfllmstxt` 采用直接上传方式发布，上传目录由以下静态文件组成：
+
+- `index.html` 与 `_headers`
+- `llms.txt`、`llms-full.txt`
+- `guide`、`docs`、`quick`、`ai`、`examples`
+
+发布命令：
+
+```bash
+rm -rf .deploy && mkdir -p .deploy
+cp index.html _headers llms.txt llms-full.txt LICENSE .deploy/
+cp -r docs quick ai examples guide .deploy/
+CLOUDFLARE_API_TOKEN=<token> CLOUDFLARE_ACCOUNT_ID=<account-id>   npx wrangler pages deploy .deploy --project-name=gfllmstxt --branch=master
+```
+
+`.deploy` 是临时目录，已在 `.gitignore` 中忽略。`_headers` 为 `llms.txt`、`llms-full.txt` 与 Markdown 文件指定内容类型。
 
 ## 许可
 
